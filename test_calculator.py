@@ -11,6 +11,8 @@ def test_add():
     assert add(-1, 1) == 0
     assert add(0, 0) == 0
 
+ 
+ 
 @pytest.mark.basic
 def test_subtract():
     """Test subtraction function."""
@@ -18,6 +20,8 @@ def test_subtract():
     assert subtract(0, 5) == -5
     assert subtract(-3, -2) == -1
 
+ 
+ 
 @pytest.mark.basic
 def test_multiply():
     """Test multiplication function."""
@@ -25,24 +29,33 @@ def test_multiply():
     assert multiply(-2, 3) == -6
     assert multiply(0, 5) == 0
 
+ 
+ 
 @pytest.mark.basic
 def test_divide():
     """Test division function."""
     assert divide(8, 2) == 4
 
+ 
+ 
 @pytest.mark.edge
 def test_divide_by_zero():
     """Test that dividing by zero raises an error."""
     with pytest.raises(ValueError):
         divide(10, 0)
 
+ 
+ 
 @pytest.mark.edge
 def test_power():
     assert power(0, 0) == 1
     assert power(2, 2) == 4
     assert power(4, 4) == 256
 
+ 
+ 
 @pytest.mark.slow
 def test_performance_sum():
     total = sum(range(500000))
     assert total > 0
+ 
